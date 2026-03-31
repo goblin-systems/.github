@@ -98,8 +98,24 @@ Both are pluggable with AI & Cloud providers.
 
 ## agents-io
 
-agents-io is a distinct product family built around AI agents - how they are installed, defined, and used across tools and environments.
+agents-io is a CLI tool for installing and running practical agent teams across the AI coding platforms
+
+```bash
+npx agents-io@latest add goblin-systems/agents-io-team
+npx agents-io@latest add goblin-systems/agents-io-team --path manage
+```
+
+It installs agents into detected AI coding tools such as OpenCode, Claude Code, Codex, and Kiro.
+
+`Manage` is the centerpiece: a manager and orchestrator for real agent-driven work. You give it an objective, and it defines success conditions and definition of done, breaks the work into workstreams, assigns specialist agents, reviews outcomes, manages risks and decisions, and keeps execution moving until the work is accepted complete. 
+`Manage` does not implement directly; subagents work independently and report back, which helps reduce constant developer context switching on longer-running tasks.
+
+- `creator` converts existing repos, agent configs, and skills into agents-io compatible agent definitions.
+`npx agents-io@latest add goblin-systems/agents-io-creator`
+
+- `sniff-test` performs review for suspicious, deceptive, or risky behavior in public agents.
+`npx agents-io@latest add goblin-systems/agents-io-sniff-test`
 
 ## Agents and skills
 
-Agents are still underused in many workflows, but they can be valuable where identity and intent matter. Agents define the who - identity and intent engineering. Skills define the how - enablement, capabilities, and tools.
+Agents are valuable where identity and intent matter. Agents define the who - role, scope, and intent. Skills define the how - reusable capabilities, tools, and enablement.
